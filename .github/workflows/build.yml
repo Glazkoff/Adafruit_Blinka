@@ -7,7 +7,7 @@ on: [pull_request, push]
 
 jobs:
   test:
-    runs-on: ${{ fromJSON(vars.CI_RUNNERS || '{}')['ubuntu-latest'] || 'ubuntu-latest' }}
+    runs-on: ubuntu-latest
     steps:
     - name: Dump GitHub context
       env:
